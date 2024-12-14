@@ -7,6 +7,8 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { FavoritesCount } from "./FavoritesCount";
+import { ShoppingCartButton } from "./ShoppingCartButton";
 
 function Menu() {
   return (
@@ -43,7 +45,10 @@ export function Navbar() {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-              ></Box>
+              >
+                <FavoritesCount />
+                <ShoppingCartButton />
+              </Box>
             </Box>
           </Toolbar>
         </Container>
