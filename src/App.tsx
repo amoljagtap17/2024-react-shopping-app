@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 export function App() {
-  return <h1>Hello React</h1>;
+  return <Typography variant="h1">Hello React</Typography>;
 }
