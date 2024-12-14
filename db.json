@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "7eb75c3c-9255-4f7f-9a5b-22e0faad327b",
+      "name": "Gorgeous Metal Bacon",
+      "description": "Ergonomic Pizza made with Cotton for all-day alarmed support",
+      "price": "674.90",
+      "image": "https://via.placeholder.com/1049x150/0d7b2e/c4d683.gif?text=cur%20talio%20tergum"
+    },
+    {
+      "id": "aa0c62f7-532a-4edd-965e-bb358764d4c0",
+      "name": "Awesome Fresh Pants",
+      "description": "The lime Shirt combines Saint Martin aesthetics with Platinum-based durability",
+      "price": "928.69",
+      "image": "https://via.placeholder.com/3935x150/ca9d18/98c2a1.webp?text=abeo%20tyrannus%20audax"
+    },
+    {
+      "id": "e135c1d7-a58f-4745-ab12-a2b260534ec7",
+      "name": "Awesome Soft Salad",
+      "description": "Ergonomic Shirt made with Metal for all-day whole support",
+      "price": "922.49",
+      "image": "https://via.placeholder.com/2521x150/c1e44f/afc7ba.png?text=doloremque%20armarium%20victoria"
+    },
+    {
+      "id": "ef5902c1-b64a-484f-a349-f1940425b0af",
+      "name": "Luxurious Plastic Tuna",
+      "description": "Featuring Gadolinium-enhanced technology, our Table offers unparalleled unwelcome performance",
+      "price": "735.39",
+      "image": "https://via.placeholder.com/1671x150/f3a415/ddeecc.jpg?text=crebro%20abstergo%20vesper"
+    },
+    {
+      "id": "1e5209f8-e239-4939-b566-bb25f69e8d18",
+      "name": "Practical Cotton Towels",
+      "description": "Our sweet-inspired Chair brings a taste of luxury to your flustered lifestyle",
+      "price": "716.49",
+      "image": "https://via.placeholder.com/1805x150/1c6106/09d89f.gif?text=ager%20video%20conturbo"
+    }
+  ]
+}
