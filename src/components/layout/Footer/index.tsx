@@ -1,34 +1,12 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import {
-  AppBar,
-  Box,
-  Container,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material";
 
-function Menu() {
-  return (
-    <IconButton
-      size="large"
-      edge="start"
-      color="inherit"
-      aria-label="menu"
-      sx={{ mr: 2 }}
-    >
-      <MenuIcon />
-    </IconButton>
-  );
-}
-
-export function Navbar() {
+export function Footer() {
   return (
     <Box>
+      <Toolbar />
       <AppBar position="static" square elevation={0}>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Menu />
             <Box
               display="flex"
               justifyContent="space-between"
@@ -36,7 +14,7 @@ export function Navbar() {
               flexGrow={1}
             >
               <Typography variant="h6" component="div">
-                Shopping App
+                Copyright &copy; {new Date().getFullYear()}
               </Typography>
               <Box
                 width={100}
@@ -48,7 +26,6 @@ export function Navbar() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Toolbar />
     </Box>
   );
 }
