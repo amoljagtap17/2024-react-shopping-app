@@ -20,5 +20,5 @@ export function QueryWrapper<T>({ query, children }: IQueryWrapperProps<T>) {
       />
     );
 
-  if (status === "success") return <>{children}</>;
+  return <>{children}</>;
 }
