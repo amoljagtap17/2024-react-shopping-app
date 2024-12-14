@@ -1,16 +1,17 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "app/mui/theme";
+import { AppRoutes } from "app/routes";
+import { BrowserRouter } from "react-router";
 
-interface IAppProviderProps {
-  children: React.ReactNode;
-}
-
-export function AppProvider({ children }: IAppProviderProps) {
+export function AppProvider() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {children}
+
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
