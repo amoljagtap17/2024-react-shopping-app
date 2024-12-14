@@ -1,12 +1,16 @@
-import { App } from "App";
 import { AppLayout } from "components/layout";
+import { lazy } from "react";
 import { Route, Routes } from "react-router";
+
+const HomePage = lazy(() =>
+  import("./home").then(module => ({ default: module.HomePage }))
+);
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route index element={<App />} />
+        <Route index element={<HomePage />} />
       </Route>
     </Routes>
   );
