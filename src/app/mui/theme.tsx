@@ -47,6 +47,32 @@ let theme = createTheme({
         disableElevation: true,
       },
     },
+    MuiCard: {
+      defaultProps: {
+        elevation: 0,
+        square: true,
+      },
+      styleOverrides: {
+        root: {
+          border: "4px solid #000",
+          borderRadius: "10px",
+          position: "relative",
+          zIndex: 0,
+          "::after": {
+            content: "''",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: "-6px",
+            bottom: "-6px",
+            zIndex: -1000,
+            borderRadius: "0 10px 10px",
+            borderRight: "9px solid #000",
+            borderBottom: "9px solid #000",
+          },
+        },
+      },
+    },
   },
 });
 
