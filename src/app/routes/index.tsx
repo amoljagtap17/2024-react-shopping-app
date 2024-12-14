@@ -1,4 +1,5 @@
 import { AppLayout } from "components/layout";
+import { FourOhFour } from "components/lib";
 import { lazy } from "react";
 import { Route, Routes } from "react-router";
 
@@ -11,6 +12,7 @@ export function AppRoutes() {
     <Routes>
       <Route element={<AppLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="*" element={<FourOhFour />} />
       </Route>
     </Routes>
   );
