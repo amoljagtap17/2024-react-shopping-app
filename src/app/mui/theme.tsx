@@ -3,22 +3,53 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { red } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const theme = createTheme({
+let theme = createTheme({
   cssVariables: true,
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#003049",
     },
     secondary: {
-      main: "#19857b",
+      main: "#669bbc",
     },
     error: {
-      main: red.A400,
+      main: "#c1121f",
+    },
+    background: {
+      default: "#fdf0d5",
+      paper: "#fdf0d5",
+    },
+  },
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+        disableTouchRipple: true,
+        focusRipple: false,
+      },
+    },
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableTouchRipple: true,
+        focusRipple: false,
+        disableFocusRipple: true,
+      },
+    },
+    MuiButton: {
+      defaultProps: {
+        disableFocusRipple: true,
+        disableTouchRipple: true,
+        focusRipple: false,
+        disableRipple: true,
+        disableElevation: true,
+      },
     },
   },
 });
 
-export default theme;
+theme = responsiveFontSizes(theme);
+
+export { theme };
