@@ -7,8 +7,8 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { ShoppingCartButton } from "features/cart";
 import { FavoritesCount } from "./FavoritesCount";
-import { ShoppingCartButton } from "./ShoppingCartButton";
 
 function Menu() {
   return (

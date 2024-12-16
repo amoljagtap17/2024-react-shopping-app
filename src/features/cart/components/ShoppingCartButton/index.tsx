@@ -1,5 +1,6 @@
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { Box, Drawer, IconButton } from "@mui/material";
+import { CartDrawer } from "features/cart";
 import { useState } from "react";
 
 interface IShoppingCartButtonProps {
@@ -31,7 +32,7 @@ export function ShoppingCartButton() {
 
       {isOpen ? (
         <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
-          Cart Drawer
+          <CartDrawer />
         </Drawer>
       ) : null}
     </Box>
