@@ -1,3 +1,4 @@
+import { useStore } from "app/store";
 import { AppLayout } from "components/layout";
 import { FourOhFour } from "components/lib";
 import { lazy } from "react";
@@ -8,6 +9,10 @@ const HomePage = lazy(() =>
 );
 
 export function AppRoutes() {
+  const store = useStore();
+
+  console.log("store::", store);
+
   return (
     <Routes>
       <Route element={<AppLayout />}>
