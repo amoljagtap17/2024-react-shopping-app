@@ -1,14 +1,18 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import { IconButton, ListItem, ListItemText, Typography } from "@mui/material";
+import { useStore } from "app/store";
+import { ICartItem } from "features/cart";
+import { IProduct } from "features/products";
 import { memo } from "react";
 import { QuantityButtons } from "./QuantityButtons";
 
 interface ICartItemProps {
-  item: any;
+  item: ICartItem & IProduct;
 }
 
 function CartItemUnmemoized({ item }: ICartItemProps) {
-  const { id, price, quantity, name } = item;
+  const { id, quantity, name, price } = item;
+  const removeItemFromCart = useStore.use.removeItemFromCart();
 
   return (
     <ListItem
@@ -18,7 +22,9 @@ function CartItemUnmemoized({ item }: ICartItemProps) {
           edge="end"
           aria-label="delete"
           color="error"
-          onClick={() => {}}
+          onClick={() => {
+            removeItemFromCart(id);
+          }}
         >
           <DeleteIcon />
         </IconButton>

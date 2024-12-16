@@ -33,7 +33,13 @@ export const createCartSlice: StateCreator<
     });
   },
   removeItemFromCart: id =>
-    set(state => ({ cart: state.cart.filter(item => item.id !== id) })),
+    set(state => {
+      // state.cart = state.cart.filter(item => item.id !== id);
+
+      const index = state.cart.findIndex(item => item.id === id);
+
+      if (index !== -1) state.cart.splice(index, 1);
+    }),
   increaseQuantity: id =>
     set(state => ({
       cart: state.cart.map(item =>
