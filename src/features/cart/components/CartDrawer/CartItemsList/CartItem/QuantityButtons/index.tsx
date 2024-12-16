@@ -1,6 +1,7 @@
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Box, IconButton, Typography } from "@mui/material";
+import { useStore } from "app/store";
 
 interface IDecreaseQuantityButtonProps {
   disabled: boolean;
@@ -47,9 +48,16 @@ interface IQuantityButtonsProps {
 }
 
 export function QuantityButtons({ id, quantity }: IQuantityButtonsProps) {
-  const onDecreaseButtonClick = () => {};
+  const increaseQuantity = useStore.use.increaseQuantity();
+  const decreaseQuantity = useStore.use.decreaseQuantity();
 
-  const onIncreaseButtonClick = () => {};
+  const onDecreaseButtonClick = () => {
+    decreaseQuantity(id);
+  };
+
+  const onIncreaseButtonClick = () => {
+    increaseQuantity(id);
+  };
 
   return (
     <Box display="flex" alignItems="center" justifyContent="center" width={140}>
