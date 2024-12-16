@@ -11,6 +11,7 @@ type CartActions = {
   removeItemFromCart: (id: number) => void;
   increaseQuantity: (id: number) => void;
   decreaseQuantity: (id: number) => void;
+  setTotal: (total: number) => void;
 };
 
 export type ICartSlice = CartState & CartActions;
@@ -76,4 +77,13 @@ export const createCartSlice: StateCreator<
       undefined,
       "cart/decreaseQuantity"
     ),
+  setTotal: total => {
+    set(
+      state => {
+        state.total = total;
+      },
+      undefined,
+      "cart/setTotal"
+    );
+  },
 });
